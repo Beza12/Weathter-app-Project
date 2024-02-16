@@ -13,21 +13,32 @@
   <body>
     <div class="weather-app">
       <header>
-        <form>
-          <input type="search" placeholder="Enter a city.." required />
-          <input type="submit" value="Search" />
+        <form class="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            required
+            class="search-input"
+          />
+          <input type="submit" value="Search" class="search-submit" />
         </form>
       </header>
       <main>
-        <div>
-          <h1>Addis Ababa</h1>
-          <p>
-            Saturday 15:32, moderate rain
-            <br />
-            Humidity: 87%, Wind:7.2km/h
-          </p>
+        <div class="weather-data">
+          <div>
+            <h1 class="weather-city">Addis Ababa</h1>
+            <p class="weather-details">
+              Saturday 15:32, moderate rain
+              <br />
+              Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+            </p>
+          </div>
+          <div class="weather-temperature">
+            <span class="weather-icon">☀️ </span>
+            <span class="weather-number"> 24</span>
+            <span class="weather-unit">°C </span>
+          </div>
         </div>
-        <div>☀️24°C</div>
       </main>
 
       <footer>
