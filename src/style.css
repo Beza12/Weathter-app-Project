@@ -54,16 +54,19 @@ main {
   display: flex;
 }
 .weather-icon {
-  font-size: 42px;
-  margin-top: 20px;
+  width: 92px;
+  height: 92px;
+  margin-top: 13px;
 }
 .weather-number {
   font-size: 85px;
-  margin-left: 12px;
-  font-weight: 700;
+  line-height: 88px;
+  margin-top: 13px;
+  margin-left: 5px;
+  font-weight: 600;
 }
 .weather-unit {
-  margin-top: 15px;
+  margin-top: 16px;
   font-size: 24px;
 }
 footer {
