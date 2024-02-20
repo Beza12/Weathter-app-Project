@@ -11,7 +11,7 @@ header {
 }
 .weather-app {
   background: white;
-  max-width: 590px;
+  max-width: 620px;
   margin: 30px auto;
   padding: 35px;
   box-shadow: 0 30px 50px rgba(60, 50, 100, 0.06);
@@ -69,6 +69,21 @@ main {
   margin-top: 16px;
   font-size: 24px;
 }
+.weather-forecast {
+  margin-top: 20px;
+}
+.forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+  color: #490322;
+}
+.forecast-temp {
+  font-size: 13px;
+}
+.temp-min {
+  opacity: 0.5;
+}
+
 footer {
   font-size: 14px;
   border-top: 1px solid #ffeded;
