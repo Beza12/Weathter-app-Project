@@ -53,8 +53,30 @@ function citySearch(event) {
 
   searchCity(searchInput.value);
 }
+function displayForecast() {
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  let forecastHtml = "";
 
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="forecast-days">
+      <div class="forecast-date">${day}</div>
+     <div class="forecast-icon"> 🌤 <div>
+     <div class="forecast-temp">
+        <div class="temp-max">
+        <strong>18°</strong>
+        </div>
+        <div class="temp-min"> 12° </div>
+      </div>
+    </div>`;
+  });
+
+  let forecast = document.querySelector("#forecast");
+  forecast.innerHTML = forecastHtml;
+}
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", citySearch);
 
 searchCity("Addis Ababa");
+displayForecast();
