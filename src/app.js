@@ -1,3 +1,5 @@
+const { default: axios } = require("axios");
+
 function currentWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
@@ -18,6 +20,8 @@ function currentWeather(response) {
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
+
+  getForecast(response.data.city);
 }
 
 function currentDate(date) {
@@ -53,7 +57,14 @@ function citySearch(event) {
 
   searchCity(searchInput.value);
 }
-function displayForecast() {
+
+function getForecast(city) {
+  let apiKey = `e1o3b3dd533bfetc4a74207b639a450e`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&unit=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+function displayForecast(response) {
+  console.log(response.data);
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
   let forecastHtml = "";
 
@@ -62,7 +73,7 @@ function displayForecast() {
       forecastHtml +
       `<div class="forecast-days">
       <div class="forecast-date">${day}</div>
-     <div class="forecast-icon"> 🌤 <div>
+     <div class="forecast-icon"> 🌤 </div>
      <div class="forecast-temp">
         <div class="temp-max">
         <strong>18°</strong>
@@ -79,4 +90,3 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", citySearch);
 
 searchCity("Addis Ababa");
-displayForecast();
