@@ -1,9 +1,9 @@
 body {
-  background-color: #ffeded;
+  background-image: url(https://cdn.pixabay.com/photo/2016/10/25/14/03/clouds-1768967_1280.jpg);
   font-family: "Montserrat", sans-serif;
 }
 a {
-  color: #c24a7e;
+  color: #244965;
 }
 header {
   border-bottom: 1px solid #ffeded;
@@ -11,23 +11,24 @@ header {
 }
 
 .weather-app {
-  background: white;
+  background: #efece3;
   max-width: 620px;
-  margin: 30px auto;
+  margin: 45px auto;
   padding: 35px;
-  box-shadow: 0 30px 50px rgba(11, 11, 11, 0.06);
+
+  box-shadow: 20px 30px 50px rgba(9, 0, 0, 0.06);
   border-radius: 13px;
 }
 .search-input {
-  background: #ffeded;
+  background-color: #efece3;
   width: 80%;
-  border: none;
+  border: 1px solid #546f83;
   border-radius: 5px;
   padding: 17px;
   font-size: 15px;
 }
 .search-submit {
-  background: #c0809c;
+  background: #546f83;
   color: white;
   padding: 17px;
   border: none;
@@ -52,7 +53,7 @@ main {
 }
 
 .weather-details strong {
-  color: #d61e6e;
+  color: #0e4397;
 }
 .weather-temperature {
   display: flex;
@@ -83,7 +84,7 @@ main {
   text-align: center;
   font-size: 16px;
   opacity: 0.8;
-  color: #5e033e;
+  color: #083253;
   line-height: 20px;
   margin-bottom: 10px;
 }
